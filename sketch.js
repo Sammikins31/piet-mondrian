@@ -29,6 +29,10 @@ function setup() {
 
         x = 0;
 
+        // generate a random height from the possiblr cell sizes
+        const actualHeight = random(possibleCellSizes);
+      
+
         while(x < canvasSize) {
       
 
@@ -43,13 +47,14 @@ function setup() {
 
             const actualWidth = random(possibleCellSizes);
 
+
             // rect(x, y, width, height)
             // x = position of the left of the square
             // y = position of the square
             // width = width in pixels of the rectangle
             // height = height in pixels of the rectangle 
             // square(x, y, squareSize);
-          rect(x, y, actualWidth, height);
+          rect(x, y, actualWidth, actualHeight);
 
         //   update x
         x = x + actualWidth;
@@ -57,6 +62,6 @@ function setup() {
         }
 
         // update y
-        y = y + height;
+        y = y + actualHeight;
     }
 }
