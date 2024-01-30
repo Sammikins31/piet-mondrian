@@ -31,12 +31,13 @@ function setup() {
             const width = squareSize;
             const height = squareSize;
 
-            // square(x, y, s)
+            // rect(x, y, width, height)
             // x = position of the left of the square
             // y = position of the square
-            // s = size of the side of the square
+            // width = width in pixels of the rectangle
+            // height = height in pixels of the rectangle 
             // square(x, y, squareSize);
-           square(x, y, width)
+          rect(x, y, width, height);
 
         }
     }
