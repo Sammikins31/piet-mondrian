@@ -32,7 +32,8 @@ function setup() {
         x = 0;
 
         // generate a random height from the possiblr cell sizes
-        const actualHeight = random(possibleCellSizes);
+        let actualHeight = random(possibleCellSizes);
+        if(y + actualHeight > canvasSize) actualHeight = canvasSize - y;
         
         
         while(x < canvasSize) {
@@ -49,9 +50,11 @@ function setup() {
             
             // update sroke weight and colour
             stroke(borderColor);
-            strokeWeight(10);
+            strokeWeight(7);
 
-            const actualWidth = random(possibleCellSizes);
+            // generate a random width from the possible cell sizes
+            let actualWidth = random(possibleCellSizes);
+            if(x + actualWidth > canvasSize) actualWidth = canvasSize - x;
 
 
             // rect(x, y, width, height)
