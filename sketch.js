@@ -1,5 +1,13 @@
 function setup() {
+    // "#f3f3f3"- white
+    // "#292928" - black
+    // "#f20d0d" - red
+    // "#0c7bbc" - blue
+    // "#fae317" - yellow
 
+    const possibleCololrs = ["#f3f3f3", "#292928", "#f20d0d", "#0c7bbc", "#fae317"]; 
+   
+    
     // size of each square
     const squareSize = 50;
     // number of cells of the grid
@@ -12,11 +20,11 @@ function setup() {
 
     for(let row = 0; row < cellNumber; row++) {
         for(let column = 0; column < cellNumber; column++) {
-            const red = random(255);
-            const green = random(255);
-            const blue = random(255);
 
-            const myColor = color(red, green, blue);
+
+            const colorCode = random(possibleCololrs);
+
+            const myColor = color(colorCode);
 
             // use fill to fill all the square with one colour
             fill(myColor)
