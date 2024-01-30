@@ -19,31 +19,37 @@ function setup() {
     const width = squareSize;
     const height = squareSize;
 
+    const borderColor = color("#404040");
+    
     createCanvas(canvasSize, canvasSize);
     background(220);
-
+    
     let x = 0;
     let y = 0;
-
+    
     while(y < canvasSize) {
-
+        
         x = 0;
 
         // generate a random height from the possiblr cell sizes
         const actualHeight = random(possibleCellSizes);
-      
-
+        
+        
         while(x < canvasSize) {
       
 
             // choose random hex code from all the possible colours
             const colorCode = random(possibleColors);
-
+            
             // store colour object in myColor
             const myColor = color(colorCode);
-
+            
             // use fill to fill all the square with one colour
             fill(myColor)
+            
+            // update sroke weight and colour
+            stroke(borderColor);
+            strokeWeight(10);
 
             const actualWidth = random(possibleCellSizes);
 
