@@ -9,18 +9,14 @@ function setup() {
    
     
     // size of each square
-    const squareSize = 50;
+    const squareSize = 60;
     //  canvas size in pixels
-    const canvasSize = 800;
+    const canvasSize = 900;
     
-    const possibleCellSizes = [squareSize, 2 * squareSize, 3* squareSize];
-
-    // set width and height
-    const width = squareSize;
-    const height = squareSize;
+    const possibleCellSizes = [2 * squareSize,  2 * squareSize, 3 * squareSize, 5 * squareSize];
 
     const borderColor = color("#404040");
-    
+
     createCanvas(canvasSize, canvasSize);
     background(220);
     
